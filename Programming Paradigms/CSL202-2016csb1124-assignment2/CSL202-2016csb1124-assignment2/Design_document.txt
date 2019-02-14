@@ -1,0 +1,16 @@
+Logic behind the program:
+
+I have created an interface Search in the Search.java file which has a method search. There are two classes that implement this interface in two different manners.
+First class LinearSearch (in LinearSearch.java file) uses linear search to find an element in a given array and returns the position of the element.
+While second class BinarySearch (in BinarySearch.java file) first sorts the given array and then uses binary search to find the position of the element in the sorted array and then returns the position in the sorted array.
+Now suppose a client wants to use this interface and wants to create objects of these classes without using their names.
+For this I have implemented a CreateObject class which makes use of reflection in java. 
+Client will only create Main class in which he mentions which class to be used whether LinearSearch or BinarySearch (here it is the user who makes this choice on the behalf of client)
+According to the above choice, an object is created in the CreateObject class of the type which is opted by the user.
+Here I have made use of reflection and used Class.forName() method.
+
+This program meets the two conditions mentioned in the assignment in the following manner:
+a) It creates objects of classes that implement the given interface.
+b) It shields the client's code in a way that if any change is made in the implementation, it will not affect the clients' code until he/she imports the new package and if the client desires to adapt the new implementation he/she just needs to have the new version of package.
+
+To make this assignment more practical, I have made use of packages. Here search_algos package can be thought as an package given by the software company and Main.java file is the one that the client has made and he/she uses the package without knowing the implementations of various algorithms.   
