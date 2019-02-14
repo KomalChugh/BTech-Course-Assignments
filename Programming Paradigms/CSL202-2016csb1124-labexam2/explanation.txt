@@ -1,0 +1,14 @@
+How to run:
+javac test.java
+java test path_to_zip_file input_file
+
+Explanation:
+In the class test, I opened the input text file using InputStreamReader. It reads from the specified input stream and here Input stream is used to read from the input_file given as command line argument. Then buffer.readLine() reads a line from the buffer which is a BufferedReader object used to read from InputStreamReader object. Now within a line we want to extract words which are separated by spaces. 
+
+For every extracted word, first the program checks that is there any full stop after it. If yes I take the substring without full stop and then the program sends every extracted word to a method of a class Check. 
+
+This method called spellCheck takes two arguments: first the name of the zip file and second the word which needs to be checked for spelling. Now this method uses input stream to read the contents of zip file and extracts zip entries from it.
+
+For every zip entry extracted, we open that file and extract lines from it (which are actually words because each line contains a single word). Now the extracted line is matched with the word given as argument to the method. If the word matches at any place, we exit the loop and set the flag to 1.
+
+Now if the flag is 1, this method returns true, otherwise it returns false. Based on what has been returned we print the error message.

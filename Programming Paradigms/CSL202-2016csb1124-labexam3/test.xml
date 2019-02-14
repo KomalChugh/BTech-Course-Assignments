@@ -1,0 +1,3 @@
+<p>This is <em>proper <strong>XML</strong></em> <strong>document</strong>
+<p>Alternatively <em>emphasized</em> <strong><em>strong emphasized</em> strong</strong></p>
+<p>This one <em>has <strong>overlapping</em> strong tag with em</strong></p></p>
